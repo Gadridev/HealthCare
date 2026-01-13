@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="flex justify-center items-center w-full h-[100vh]">
+      <div class="shadow-md flex h-[50vh] gap-4">
+        <div class="bg-[#FBD207]">
+          <img src="./erasebg-transformed.png" alt="" />
+        </div>
+        <div class="w-[50%]">
+          <h1 class="text-black font-bold text-[40px] text-center">
+            HealtCare
+          </h1>
+          <form id="loginForm">
+              <div class="flex gap-[20px] justify-center mt-3 mb-[2rem]">
+                  <p>Nom :</p>
+                  <div><input id="nom" type="text" class="shadow-md" /></div>
+                </div>
+                <div class="flex gap-[20px] justify-center mt-3 mb-[2rem]">
+                    <p>prenom :</p>
+                    <div><input id="prenom" type="text" class="shadow-md" /></div>
+                </div>
+                <div class="flex gap-[20px] justify-center mt-3 mb-[2rem]">
+                    <p>Telephone :</p>
+                    <div><input id="telephone" type="text" class="shadow-md" /></div>
+                </div>
+                <div class="flex gap-[20px] justify-center mt-3 mb-[2rem]">
+                    <p>Email:</p>
+                    <div><input id="email" type="text" class="shadow-md" /></div>
+                </div>
+                <div class="flex gap-[20px] justify-center mt-3 mb-[2rem]">
+                    <p>Motif :</p>
+                    <div><input id="motif" type="text" class="shadow-md" /></div>
+                </div>
+                <div class="flex gap-[20px] justify-center mt-3 mb-[2rem]">
+                    <p>Date souhaitee :</p>
+                    <div><input id="date" type="date" class="shadow-md" /></div>
+                </div>
+                <div id="error-message" class="hidden bg-red-100 border border-red-400 text-red-700  w-[10rem] text-center rounded"></div>
+                <div class="flex justify-center">
+                    <button class="bg-[#FBD207] p-2 rounded-3" id="btn" type="submit">
+                        Ajouter un Demande
+                    </button>
+                </div>
+            </form>
+
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
