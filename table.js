@@ -32,5 +32,9 @@ function showData() {
     container.appendChild(tr);
   });
 }
-
+function deleteItem(index) {
+  getData.splice(index, 1);
+  localStorage.setItem("data", JSON.stringify(getData));
+  showData();
+}
 document.addEventListener("DOMContentLoaded", initTable);
