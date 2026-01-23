@@ -32,6 +32,20 @@ function showData() {
     container.appendChild(tr);
   });
 }
+function seachItem(value) {
+  const seachValue = value.toLowerCase();
+  filterData = getData.filter((item) => {
+    return (
+      item.nom.toLowerCase().includes(seachValue) ||
+      item.email.toLowerCase().includes(seachValue) ||
+      item.motif.toLowerCase().includes(seachValue)
+    );
+  });
+  showData();
+}
+search.addEventListener("input",(e)=>{
+  seachItem(e.target.value);
+})
 function deleteItem(index) {
   getData.splice(index, 1);
   localStorage.setItem("data", JSON.stringify(getData));
